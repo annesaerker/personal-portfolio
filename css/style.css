@@ -1,0 +1,616 @@
+/********** GENERAL ***********/
+@import url(https://fonts.googleapis.com/css?family=Anton|Saira+Condensed|Teko);
+@import url(https://fonts.googleapis.com/css?family=Creepster|Ewert|Faster+One|Press+Start+2P|UnifrakturMaguntia);
+.margin-top {
+  margin-top: 10%; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #F5F5F5; }
+
+h2 {
+  font-size: 7rem;
+  font-family: 'Saira Condensed', sans-serif; }
+
+h3 {
+  text-transform: uppercase;
+  color: red;
+  font-size: 110px;
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif;
+  text-shadow: -6px 6px #fbc2c2; }
+
+h4 {
+  text-transform: uppercase;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif; }
+
+a {
+  color: #600;
+  text-decoration: none; }
+
+a:active {
+  color: #600;
+  text-decoration: none; }
+
+p {
+  font-size: 24px;
+  color: red;
+  font-family: 'Saira Condensed', sans-serif; }
+
+button {
+  font-family: 'Saira Condensed', sans-serif;
+  border: none;
+  background: none; }
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 2; }
+
+footer {
+  flex: 1;
+  width: 100vw;
+  background: linear-gradient(to top, #fcc, #ffffff);
+  color: red;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column; }
+  footer h2 {
+    text-align: center;
+    font-size: 10rem;
+    text-shadow: -6px 6px #fbc2c2;
+    text-transform: uppercase;
+    text-shadow: -10px 10px 0px #fb6161, -20px 20px 0px #fa9898, -30px 30px 0px #fbc2c2; }
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px; }
+  .footer-info a {
+    text-decoration: none; }
+
+/************  ICONS  *************/
+.icon {
+  fill: #ff0000; }
+
+.icons svg {
+  margin: 10px; }
+
+/**********  PRELOADER ************/
+#preloader {
+  background: #fcc;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 9999; }
+
+#status,
+.status-mes {
+  background-image: url(../img/puff.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  position: absolute;
+  top: 50%;
+  width: 200px; }
+
+.status-mes {
+  background: none;
+  left: 0;
+  margin: 0;
+  text-align: center;
+  top: 65%; }
+
+/*************  BASIC PAGE FEATURES  ***************/
+#iPageHome, #iPageAbout, #iPageProject1, #iPageContact {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  flex-direction: column;
+  color: white;
+  font-size: 50px;
+  background-color: white; }
+
+#iPageHome, #iPageAbout {
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 40%;
+  left: 0;
+  margin: 0 auto;
+  font-family: 'Saira Condensed', sans-serif; }
+  .container p {
+    font-size: 24px; }
+  .container a {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #FF5252;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    top: 5px; }
+    .container a:after {
+      content: '';
+      position: absolute;
+      background: #FF5252;
+      height: 2px;
+      width: 0%;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+      transition: .35s ease; }
+    .container a:hover:after, .container a:focus:after, .container a:active:after {
+      width: 100%; }
+
+h1 {
+  position: relative;
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif; }
+
+/* SIDEBAR NAVIGATION */
+.vNav {
+  position: fixed;
+  top: 30%;
+  left: 90%;
+  width: 50px;
+  z-index: 9999;
+  list-style-type: none; }
+
+.vNav ul {
+  position: relative;
+  padding: 3px;
+  padding-left: 35%; }
+
+.vNav ul li {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 35%;
+  color: #718785; }
+
+.vNav a {
+  display: block;
+  width: 8px;
+  height: 8px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: red;
+  text-decoration: none; }
+
+.vNav a:hover {
+  border-radius: 50%;
+  background-color: red;
+  text-decoration: none; }
+
+.vNav a.active {
+  border-radius: 50%;
+  background-color: red;
+  text-decoration: none; }
+
+.label {
+  position: relative;
+  top: -60%;
+  left: -200%;
+  width: 100%;
+  text-align: right;
+  font-size: 15px;
+  color: red;
+  display: none;
+  font-family: 'Saira Condensed', sans-serif; }
+
+/********** NAVIGATION ***********/
+nav h1 {
+  position: fixed;
+  margin: 0 27px 0 27px;
+  z-index: 2;
+  color: red;
+  font-size: 50px; }
+
+#overlay .overlay-menu a {
+  display: block;
+  position: relative;
+  color: #ff0000;
+  text-decoration: none;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 100px; }
+
+.logo .logo-1 {
+  color: red;
+  text-transform: uppercase; }
+
+.logo .logo-2 {
+  color: blue !important; }
+
+.logo .logo-3 {
+  color: orange !important; }
+
+.button_container {
+  position: fixed;
+  right: 0;
+  height: 27px;
+  width: 35px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  margin: 27px; }
+  .button_container:hover {
+    opacity: .7; }
+  .button_container.active .top {
+    transform: translateY(11px) translateX(0) rotate(45deg);
+    background: #ff0000; }
+  .button_container.active .middle {
+    opacity: 0;
+    background: #ff0000; }
+  .button_container.active .bottom {
+    transform: translateY(-11px) translateX(0) rotate(-45deg);
+    background: #ff0000; }
+  .button_container span {
+    background: #ff0000;
+    border: none;
+    height: 5px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer; }
+    .button_container span:nth-of-type(2) {
+      top: 11px; }
+    .button_container span:nth-of-type(3) {
+      top: 22px; }
+
+.overlay {
+  position: fixed;
+  background: #fcc;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden; }
+  .overlay.open {
+    opacity: 1;
+    z-index: 3;
+    visibility: visible;
+    height: 100%; }
+    .overlay.open li:nth-of-type(2) {
+      animation-delay: .4s; }
+    .overlay.open li:nth-of-type(3) {
+      animation-delay: .45s; }
+    .overlay.open li:nth-of-type(4) {
+      animation-delay: .50s; }
+  .overlay nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 400;
+    text-align: center; }
+  .overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .overlay ul li {
+      font-size: 30px; }
+      .overlay ul li a {
+        display: block;
+        position: relative;
+        color: #ff0000;
+        text-decoration: none;
+        overflow: hidden;
+        text-transform: uppercase; }
+        .overlay ul li a a:hover {
+          color: #f99; }
+        .overlay ul li a:hover:after, .overlay ul li a:focus:after, .overlay ul li a:active:after {
+          width: 100%;
+          color: #f99; }
+        .overlay ul li a:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: #f99;
+          transition: .35s; }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+/********** FRONT PAGE ***********/
+.banner-container {
+  background: linear-gradient(to bottom, #fcc, #ffffff);
+  height: 800px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column; }
+
+.banner-text {
+  text-align: center;
+  font-size: 5.5rem;
+  color: #ff0000;
+  text-transform: uppercase;
+  text-shadow: -10px 10px 0px #fb6161, -20px 20px 0px #fa9898, -30px 30px 0px #fbc2c2; }
+
+.section-container {
+  height: 800px;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#iPageHome .project-contanier {
+  width: 70%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.project-image {
+  background-color: #fcc;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .project-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    background-size: contain; }
+  .project-image .project-text {
+    position: absolute;
+    width: 100%; }
+
+.hover-overlay {
+  position: absolute;
+  display: flex;
+  width: 70%;
+  height: 600px;
+  opacity: 0;
+  transition: .5s ease;
+  background: linear-gradient(transparent, #fcc); }
+
+.project-contanier:hover .hover-overlay {
+  opacity: 0.5; }
+
+/********** ABOUT PAGE ***********/
+.about-container {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.paragraf-text {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin-top: 20px; }
+  .paragraf-text .image-container {
+    background-color: #fcc;
+    margin: 20px;
+    flex-wrap: wrap;
+    height: 361px; }
+  .paragraf-text img {
+    object-fit: cover;
+    width: 300px;
+    transform: translateX(1rem) translateY(-1rem); }
+  .paragraf-text h3 {
+    line-height: 1;
+    text-align: left;
+    align-items: center;
+    display: flex;
+    margin-left: 5%; }
+  .paragraf-text p {
+    margin: 20px 0; }
+
+.text {
+  display: flex;
+  flex-direction: column; }
+
+/********** PROJECTS BANNAER IMAGE ***********/
+#iPageProject1 footer, #iPageProject2 footer, #iPageProject3 footer, #iPageProject4 footer, #iPageProject5 footer, #iPageProject6 footer, #iPageProject7 footer, #iPageProject8 footer {
+  background: linear-gradient(to top, #ffffff, #fcc) !important; }
+
+#iPageProject1 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/web-development/pa.jpg") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject2 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/interface-design/t.jpg") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject3 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/internship/internship_bg.jpg") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject4 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/multimedia-thesis/02.jpg") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject5 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/multimedia-solution/lopsided1.png") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject6 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/xperience-design/bg_gif.gif") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject7 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/video-animation/vibrance_create.png") no-repeat fixed;
+  background-size: cover; }
+
+#iPageProject8 .banner-container {
+  background: linear-gradient(transparent, #fcc), url("../img/graphic-design/graphic_bg.jpg") no-repeat fixed;
+  background-size: cover; }
+
+/********** PROJECTS ***********/
+.project-container {
+  width: 100vw;
+  background-color: #fcc;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .project-container .image-container {
+    flex-wrap: wrap;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .project-container img {
+    object-fit: cover;
+    width: 70%;
+    margin: 20px 0 20px 0; }
+
+.three-images img {
+  width: 20%;
+  margin: 20px; }
+
+.two-images img {
+  width: 40%;
+  margin: 20px; }
+
+.paragraf-text {
+  margin: 20px; }
+
+.text {
+  display: flex;
+  flex-direction: column; }
+
+.riaria .image-container img {
+  width: 35% !important;
+  margin: 20px; }
+
+.project-information {
+  align-items: center;
+  flex-direction: column;
+  display: flex; }
+
+.additional-info {
+  flex-direction: row;
+  display: flex;
+  width: 70%;
+  margin-top: 50px; }
+  .additional-info .programs {
+    margin-right: 10%; }
+  .additional-info h4 {
+    text-align: left !important; }
+
+/**************  MEDIA QUERYS  **************/
+@media (max-width: 575.98px) {
+  .paragraf-text p {
+    font-size: 40px; }
+
+  #iPageProject2 .banner-container {
+    background-size: contain !important; } }
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .paragraf-text p {
+    font-size: 40px; }
+
+  #iPageContact .cFooter .footer-info {
+    display: flex;
+    flex-direction: column;
+    font-size: 40px; }
+
+  .three-images img {
+    width: 70%; } }
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .paragraf-text p {
+    font-size: 40px; }
+
+  .vNav ul {
+    display: none; }
+
+  #iPageProject1 .banner-container, #iPageProject2 .banner-container, #iPageProject3 .banner-container, #iPageProject4 .banner-container, #iPageProject5 .banner-container, #iPageProject6 .banner-container, #iPageProject7 .banner-container, #iPageProject8 .banner-container {
+    background-size: contain !important; }
+
+  #iPageProject5 .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/multimedia-solution/hunkon_bg_m.jpg") no-repeat fixed; }
+
+  #iPageProject7 .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/video-animation/vibrance_mobile_bg.jpg") no-repeat fixed; }
+
+  #iPageProject4 .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/multimedia-thesis/02_m.jpg") no-repeat fixed; }
+
+  #iPageContact .footer-info {
+    flex-direction: column-reverse;
+    align-items: center; }
+    #iPageContact .footer-info p {
+      font-size: 44px;
+      margin: 50px; }
+    #iPageContact .footer-info .icons svg {
+      margin: 50px 30px; }
+
+  .button_container {
+    height: 48px;
+    width: 75px; }
+    .button_container span {
+      height: 8px; }
+
+  .button_container span:nth-of-type(2) {
+    top: 20px; }
+
+  .button_container span:nth-of-type(3) {
+    top: 39px; }
+
+  .button_container.active .top {
+    transform: translateY(29px) translateX(0) rotate(45deg); }
+
+  nav h1 {
+    font-size: 65px; } }
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .project-image img {
+    width: 900px; }
+
+  .hover-overlay {
+    width: 900px; } }
+@media (min-width: 1200px) {
+  .project-image img {
+    width: 900px; }
+
+  .hover-overlay {
+    width: 900px; } }
+
+/*# sourceMappingURL=style.css.map */

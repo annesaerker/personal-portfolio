@@ -1,0 +1,904 @@
+ /********** GENERAL ***********/
+
+ @import url(https://fonts.googleapis.com/css?family=Anton|Saira+Condensed|Teko);
+ @import url(https://fonts.googleapis.com/css?family=Creepster|Ewert|Faster+One|Press+Start+2P|UnifrakturMaguntia);
+
+//  font-family: 'UnifrakturMaguntia', cursive;
+// font-family: 'Ewert', cursive;
+// font-family: 'Faster One', cursive;
+// font-family: 'Press Start 2P', cursive;
+// font-family: 'Creepster', cursive;
+
+.margin-top {
+  margin-top: 10%;
+} 
+ 
+ 
+$color-primary-text: #ff0000;
+$color-active-text: #600;
+$color-hover-text: #f99;
+
+$color-background: #F5F5F5;
+$color-primary: #fff;
+$color-secondary: #fcc;
+
+$color-red: #ff0000;
+
+$color-main: #FF5252;
+$color-active: #FFF;
+$color-link: #FFF;
+ 
+ $button-height: 27px;
+ $button-width: 35px;
+
+//  font-family: 'Anton', sans-serif;
+//  font-family: 'Teko', sans-serif;
+//  font-family: 'Saira Condensed', sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ body {
+   background: $color-background;
+  //  margin: 0;
+  //  width: 100vw;
+  //   height: 100vh;
+  //   overflow: hidden;
+ }
+
+ h2 {
+  font-size: 7rem;
+  font-family: 'Saira Condensed', sans-serif;
+ }
+
+ h3 {
+  text-transform: uppercase;
+  color: red;
+  font-size: 110px;
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif;
+  text-shadow: -6px 6px #fbc2c2;
+ }
+
+ h4 {
+  text-transform: uppercase;
+  color: red;
+  font-size: 40px;
+  text-align: center;
+  font-family: 'Saira Condensed', sans-serif;
+ }
+
+ a{
+  color: $color-active-text;
+  text-decoration: none;
+}
+
+a:active {
+  color: $color-active-text;
+  text-decoration: none;
+}
+
+ p {
+  font-size: 24px;
+  color: red;
+  font-family: 'Saira Condensed', sans-serif;
+ }
+
+ button {
+  font-family: 'Saira Condensed', sans-serif;
+  border:none;
+  background:none;
+ }
+
+ header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  z-index: 2;
+}
+
+
+footer {
+  flex: 1;
+  width: 100vw;
+  background: linear-gradient(to top, #fcc, #ffffff);
+  color: red;
+  height: 800px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+
+  h2 {
+    text-align: center;
+    font-size: 10rem;
+    text-shadow: -6px 6px #fbc2c2;
+    text-transform: uppercase;
+    text-shadow: -10px 10px 0px #fb6161, -20px 20px 0px #fa9898, -30px 30px 0px #fbc2c2;
+  }
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+}
+
+/************  ICONS  *************/
+.icon {
+  fill: $color-primary-text;
+}
+
+.icons {
+  svg {
+    margin: 10px;
+  }
+}
+
+/**********  PRELOADER ************/
+ #preloader {
+  background : #fcc;
+  bottom     : 0;
+  left       : 0;
+  position   : fixed;
+  right      : 0;
+  top        : 0;
+  z-index    : 9999;
+  }
+
+#status,
+.status-mes {
+  background-image    : url(../img/puff.svg);
+  background-position : center;
+  background-repeat   : no-repeat;
+  height              : 200px;
+  left                : 50%;
+  margin              : -100px 0 0 -100px;
+  position            : absolute;
+  top                 : 50%;
+  width               : 200px;
+  }
+
+.status-mes {
+  background : none;
+  left       : 0;
+  margin     : 0;
+  text-align : center;
+  top        : 65%;
+  }
+
+/*************  BASIC PAGE FEATURES  ***************/
+
+#iPageHome, #iPageAbout, #iPageProject1, #iPageContact{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  // height: 100vh;
+  flex-direction: column;
+  color: white;
+  font-size: 50px;
+  background-color: white;
+}
+#iPageHome, #iPageAbout{
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+ 
+ .container {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   top: 40%;
+   left: 0;
+   margin:  0 auto;
+   font-family: 'Saira Condensed', sans-serif;
+ 
+   p {
+    font-size: 24px;
+   }
+   
+   a {
+     display: inline-block;
+     position: relative;
+     text-align: center;
+     color: $color-main;
+     text-decoration: none;
+     font-size: 20px;
+     overflow: hidden;
+     top: 5px;
+     
+     &:after {
+       content: '';
+       position: absolute;
+       background: $color-main;
+       height: 2px;
+       width: 0%;
+       transform: translateX(-50%);
+       left: 50%;
+       bottom: 0;
+       transition: .35s ease;
+     }
+     &:hover:after,
+     &:focus:after,
+     &:active:after {
+       width: 100%;
+     }
+   }
+ }
+ 
+ h1 {
+   position: relative;
+   text-align: center;
+   font-family: 'Saira Condensed', sans-serif;
+ }
+
+/* SIDEBAR NAVIGATION */
+.vNav {
+  position: fixed;
+  top: 30%;
+  left: 90%;
+  width: 50px;
+  z-index: 9999;
+  list-style-type: none;
+}
+
+.vNav ul {
+  position: relative;
+  padding: 3px;
+  padding-left: 35%;
+}
+
+.vNav ul li{
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 35%;
+  color: rgb(113,135,133);
+}
+
+.vNav a{
+  display: block;
+  width: 8px;
+  height: 8px;
+  text-indent: -9999px;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+.vNav a:hover{
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+.vNav a.active{
+  border-radius: 50%;
+  background-color: rgb(255, 0, 0);
+  text-decoration: none;
+}
+
+.label {
+  position: relative;
+  top: -60%;
+  left: -200%;
+  width: 100%;
+  text-align: right;
+  font-size: 15px;
+  color: rgb(255, 0, 0);
+  display: none;
+  font-family: 'Saira Condensed', sans-serif;
+}
+ 
+/********** NAVIGATION ***********/
+
+nav {
+ 
+    h1 {
+      position: fixed;
+      margin: 0 27px 0 27px;
+      z-index: 2;
+      color: red;
+      font-size: 50px;
+    }
+  }
+
+  #overlay .overlay-menu a{
+    display: block;
+    position: relative;
+    color: #ff0000;
+    text-decoration: none;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-size: 100px;
+  }
+
+  .logo .logo-1 {
+    color: red;
+    text-transform: uppercase;
+   
+  }
+
+  .logo .logo-2 {
+    color: blue !important;
+    
+  }
+  .logo .logo-3 {
+    color: orange !important;
+    
+  }
+
+.button_container {
+  position: fixed;
+  // top: 5%;
+  right: 0;
+  height: $button-height;
+  width: $button-width;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+  margin: 27px;
+  
+  &:hover {
+    opacity: .7;
+  }
+  
+  &.active {
+    .top {
+      transform: translateY(11px) translateX(0) rotate(45deg);
+      background: $color-red;
+    }
+    .middle {
+      opacity: 0;
+      background: $color-red;
+    }
+    
+    .bottom {
+      transform: translateY(-11px) translateX(0) rotate(-45deg);
+      background: $color-red;
+    }
+  }
+  
+  span {
+  background: $color-red;
+  border: none;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:  all .35s ease;
+  cursor: pointer;
+    
+    &:nth-of-type(2) {
+      top: 11px;
+    }
+    
+    &:nth-of-type(3) {
+      top: 22px;
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  background: $color-secondary;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s, visibility .35s, height .35s;
+  overflow: hidden;
+  
+  &.open {
+    opacity: 1;
+    z-index: 3;
+    visibility: visible;
+    height: 100%;
+    
+    li {
+      
+      &:nth-of-type(2) {
+        animation-delay: .4s;
+      }
+      &:nth-of-type(3) {
+        animation-delay: .45s;
+      }
+      &:nth-of-type(4) {
+        animation-delay: .50s;
+      }
+    }
+  }
+  nav {
+    position: relative;
+    height: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 50px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 400;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+    li {
+      font-size: 30px;
+      
+      a {
+        display: block;
+        position: relative;
+        color: $color-primary-text;
+        text-decoration: none;
+        overflow: hidden;
+        text-transform: uppercase;
+
+        a:hover {
+          color: $color-hover-text;
+        }
+        
+        &:hover:after,
+         &:focus:after,
+         &:active:after {
+           width: 100%;
+           color: $color-hover-text;
+         }
+        
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          width: 0%;
+          transform: translateX(-50%);
+          height: 3px;
+          background: $color-hover-text;
+          transition: .35s;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    left: 20%;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+/********** FRONT PAGE ***********/
+
+.banner-container{
+  // background-color: #fcc;
+  background: linear-gradient(to bottom, #fcc, #ffffff);
+  height: 800px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+  .banner-text {
+    text-align: center;
+    font-size: 5.5rem;
+    color: $color-primary-text;
+    text-transform: uppercase;
+    text-shadow: -10px 10px 0px #fb6161,
+                 -20px 20px 0px #fa9898,
+                 -30px 30px 0px #fbc2c2;
+  }
+
+.section-container {
+  height: 800px;
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#iPageHome {
+  .project-contanier {
+    width: 70%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.project-image{
+  background-color: $color-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    background-size: contain;
+  }
+  .project-text{
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.hover-overlay {    
+  position: absolute;
+  display: flex;
+  width: 70%;
+  height: 600px;
+  opacity: 0;
+  transition: .5s ease;
+  // background-color: #fcc; 
+  background: linear-gradient(transparent, #fcc);
+}
+
+.project-contanier:hover .hover-overlay {
+  opacity:0.5;
+}
+
+/********** ABOUT PAGE ***********/
+
+.about-container {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.paragraf-text{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin-top: 20px;
+
+    .image-container {
+      background-color: #fcc;
+      margin: 20px;
+      flex-wrap: wrap;
+      height: 361px;
+    }
+    img {
+      object-fit: cover;
+      width: 300px;
+      transform: translateX(1rem) translateY(-1rem);
+    }
+
+    h3{
+      line-height: 1;
+      text-align: left;
+      align-items: center;
+      display: flex;
+      margin-left: 5%;
+    }
+
+    p {
+      margin: 20px 0;
+    }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+/********** PROJECTS BANNAER IMAGE ***********/
+
+#iPageProject1, #iPageProject2, #iPageProject3, #iPageProject4, #iPageProject5, #iPageProject6, #iPageProject7, #iPageProject8 {
+
+  footer {
+    background: linear-gradient(to top, #ffffff, #fcc) !important;
+  }
+}
+
+#iPageProject1 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/web-development/pa.jpg")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject2 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/interface-design/t.jpg")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject3 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/internship/internship_bg.jpg")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject4 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/multimedia-thesis/02.jpg")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject5 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/multimedia-solution/lopsided1.png")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject6 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/xperience-design/bg_gif.gif")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject7 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/video-animation/vibrance_create.png")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+#iPageProject8 {
+  .banner-container {
+    background: linear-gradient(transparent, #fcc), url("../img/graphic-design/graphic_bg.jpg")  no-repeat fixed;
+    background-size: cover;
+  }
+}
+
+/********** PROJECTS ***********/
+
+.project-container {
+  width: 100vw;
+  background-color: $color-secondary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .image-container {
+    flex-wrap: wrap;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+  }
+  img {
+    object-fit: cover;
+    width: 70%;
+    margin: 20px 0 20px 0;
+  }
+}
+
+.three-images {
+  img {
+    width: 20%;
+    margin: 20px;
+  }
+}
+
+.two-images {
+  img {
+    width: 40%;
+    margin: 20px;
+  }
+}
+
+.paragraf-text{
+    // display: flex;
+    // justify-content: center;
+    // width: 70%;
+    margin: 20px;
+
+    p{
+      
+    }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+}
+
+.riaria {
+  .image-container img {
+    width: 35% !important;
+    margin: 20px;
+  }
+}
+
+.project-information {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.additional-info {
+  flex-direction: row;
+  display: flex;
+  width: 70%;
+  margin-top: 50px;
+
+  .programs {
+    margin-right: 10%;
+  }
+
+  h4{
+    text-align: left !important;
+  }
+
+}
+
+/**************  MEDIA QUERYS  **************/
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+  .paragraf-text {
+    p{
+      font-size: 40px;
+    }
+  }
+
+  #iPageProject2 .banner-container {
+    background-size: contain !important;
+  }
+ }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .paragraf-text {
+    p{
+      font-size: 40px;
+    }
+  }
+
+  #iPageContact {
+    .cFooter {
+      .footer-info {
+        display: flex;
+        flex-direction: column;
+        font-size: 40px;
+    }
+  }
+}
+  
+  .three-images img {
+    width: 70%;
+  }
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .paragraf-text {
+    p{
+      font-size: 40px;
+    }
+  }
+
+  .vNav ul {
+    display: none;
+  }
+
+  #iPageProject1, #iPageProject2, #iPageProject3, #iPageProject4, #iPageProject5, #iPageProject6, #iPageProject7, #iPageProject8{
+    .banner-container{
+        background-size: contain !important;
+    }
+  }
+
+  #iPageProject5 {
+    .banner-container{
+      background: linear-gradient(transparent, #fcc), url("../img/multimedia-solution/hunkon_bg_m.jpg")  no-repeat fixed;
+    }
+  }
+
+  #iPageProject7 {
+    .banner-container{
+      background: linear-gradient(transparent, #fcc), url("../img/video-animation/vibrance_mobile_bg.jpg")  no-repeat fixed;
+    }
+  }
+
+  #iPageProject4 {
+    .banner-container {
+      background: linear-gradient(transparent, #fcc), url("../img/multimedia-thesis/02_m.jpg")  no-repeat fixed;
+    }
+  }
+
+  #iPageContact {
+    .footer-info {
+      flex-direction: column-reverse;
+      align-items: center;
+      p {
+        font-size: 44px;
+        margin: 50px;
+      }
+      .icons svg {
+        margin: 50px 30px;
+      }
+    }
+  }
+
+  .button_container {
+    height: 48px;
+    width: 75px;
+
+    span {
+      height: 8px;
+    }
+  }
+
+  .button_container span:nth-of-type(2) {
+    top: 20px;
+  }
+
+  .button_container span:nth-of-type(3) {
+    top: 39px;
+  }
+
+  .button_container.active .top {
+    transform: translateY(29px) translateX(0) rotate(45deg);
+  }
+
+  nav h1 {
+    font-size: 65px
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
+  .project-image img {
+    width: 900px;
+  }
+
+  .hover-overlay {
+    width: 900px;
+  }
+
+ }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {  
+
+  .project-image img {
+    width: 900px;
+  }
+  .hover-overlay {
+    width: 900px;
+  }
+}
+
+
+
